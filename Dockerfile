@@ -11,7 +11,8 @@ RUN npm run build
 FROM nginx:alpine
 VOLUME /var/cache/nginx
 COPY --from=node /app/dist/ng-rails/browser /usr/share/nginx/html
-COPY ./config/nginx.conf /etc/nginx/conf.d/default.conf
+RUN rm /etc/nginx/conf.d/default.conf
+COPY ./config/nginx.conf /etc/nginx/nginx.conf
 
 # docker build -t ng-rails .
 # docker run -d -p 4200:4200 ng-rails
