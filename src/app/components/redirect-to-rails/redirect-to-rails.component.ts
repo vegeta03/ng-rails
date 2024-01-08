@@ -5,6 +5,7 @@ import {
   Inject,
   OnInit,
 } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-redirect-to-rails',
@@ -15,9 +16,13 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class RedirectToRailsComponent implements OnInit {
-  constructor(@Inject(DOCUMENT) private document: Document) {}
+  constructor(
+    @Inject(DOCUMENT) private _document: Document,
+    private _router: Router
+  ) {}
 
   ngOnInit(): void {
-    this.document.location.href = 'http://localhost:80/page3';
+    const url = this._router.url;
+    this._document.location.href = 'http://localhost:80' + url;
   }
 }

@@ -3,14 +3,14 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-page4',
   standalone: true,
   imports: [
     CommonModule,
     RouterLink
   ],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
+  templateUrl: './page4.component.html',
+  styleUrl: './page4.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomeComponent { }
+export class Page4Component { }

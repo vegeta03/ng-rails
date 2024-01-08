@@ -14,4 +14,4 @@ COPY --from=node /app/dist/ng-rails/browser /usr/share/nginx/html
 COPY ./config/nginx.conf /etc/nginx/conf.d/default.conf
 
 # docker build -t ng-rails .
-# docker run -p 8080:80 ng-rails
+# docker run -d -p 4200:4200 ng-rails

@@ -3,11 +3,14 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-second-page',
+  selector: 'app-page1',
   standalone: true,
-  imports: [CommonModule, RouterLink],
-  templateUrl: './second-page.component.html',
-  styleUrl: './second-page.component.scss',
+  imports: [
+    CommonModule,
+    RouterLink
+  ],
+  templateUrl: './page1.component.html',
+  styleUrl: './page1.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SecondPageComponent {}
+export class Page1Component { }
